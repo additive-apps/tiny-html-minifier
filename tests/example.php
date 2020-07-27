@@ -1,7 +1,6 @@
 <?php
 
-// TODO: use namespace:
-// use Minifier\TinyMinify;
+use Minifier\TinyMinify;
 
 require '../src/TinyMinify.php';
 
