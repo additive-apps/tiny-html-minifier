@@ -1,6 +1,6 @@
 # Tiny Html Minifier
 
-![Version 2.2](https://img.shields.io/badge/version-2.2-blue.svg) ![MIT license](https://img.shields.io/badge/license-MIT-green.svg) [![Donate](https://img.shields.io/badge/give-donation-yellow.svg)](https://www.paypal.me/DevoneraAB)
+![Version 3.0.0](https://img.shields.io/badge/version-3.0.0-blue.svg) ![MIT license](https://img.shields.io/badge/license-MIT-green.svg) [![Donate](https://img.shields.io/badge/give-donation-yellow.svg)](https://www.paypal.me/DevoneraAB)
 
 [Changelog](changelog.md)
 
@@ -25,21 +25,21 @@
 
 ## Install & usage
 
-### 1. Download
-
-**ZIP**
-
-Download `tiny-html-minifier.php` or the whole ZIP.
-
 **Composer**
 
-You can install it with Composer as well.
+```bash
+composer require pfaciana/tiny-html-minifier
+```
 
-### 2. Add the code
+**PHP**
 
 ```php
 <?php
-require 'tiny-html-minifier.php';
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Minifier\TinyMinify;
+
 echo TinyMinify::html($html);
 ```
 
@@ -102,7 +102,11 @@ echo TinyMinify::html($html);
 
 ```php
 <?php
-require 'tiny-html-minifier.php';
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Minifier\TinyMinify;
+
 echo TinyMinify::html($html, $options = [
     'collapse_whitespace' => false,
     'disable_comments' => false,
