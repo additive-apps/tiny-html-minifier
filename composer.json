@@ -1,18 +1,22 @@
 {
-    "name": "jenstornell/tiny-html-minifier",
+    "name": "pfaciana/tiny-html-minifier",
     "description": "Minify HTML in PHP with just a single class",
     "keywords": [
         "minifier",
         "minify",
         "html"
     ],
-    "version": "2.2",
+    "version": "3.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Jens Törnell",
             "email": "webblayout@gmail.com"
+        },
+        {
+            "name": "Phil Faciana",
+            "email": "phil@renderdev.com"
         }
     ],
     "require": {},
