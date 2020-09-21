@@ -141,7 +141,6 @@ class TinyHtmlMinifier
     {
         $element = $this->stripWhitespace($element);
         $element = $this->addChevrons($element, $noll);
-        $element = $this->removeSelfSlash($element);
         $element = $this->removeMeta($element, $name);
         return $element;
     }
@@ -188,15 +187,6 @@ class TinyHtmlMinifier
         }
         $char = ($this->contains('>', $noll)) ? '>' : '';
         $element = '<' . $element . $char;
-        return $element;
-    }
-
-    // Remove unneeded self slash
-    private function removeSelfSlash($element)
-    {
-        if (substr($element, -3) == ' />') {
-            $element = substr($element, 0, -3) . '>';
-        }
         return $element;
     }
 
